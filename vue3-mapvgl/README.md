@@ -3,7 +3,7 @@
 
 ### 百度地图mvgVGL模式
 
-
+<img src="./public/img.png">
 
 ``` bash
 # install dependencies
