@@ -3,7 +3,7 @@
     <div class="header" @click="menuShow = !menuShow">MvgVGL--{{ menuInfo.name }}</div>
     <transition name="el-zoom-in-top">
       <ul v-show="menuShow" class="ul-box">
-        <li v-for="(item,index) in menuList" :key="index" class="li-box" @click="toRoute(item)">
+        <li v-for="(item,index) in menuList" :key="index" :class="[item.id == menuInfo.id ?'active':'']" class="li-box" @click="toRoute(item)">
           {{ item.name }} - {{ item.router }}
         </li>
       </ul>
@@ -14,6 +14,8 @@
 <script setup>
 // computed,onUnmounted,watch
 import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+const router = useRouter();
 const menuShow = ref(true);
 const menuList = [
   { name: '基础版本', id: '1', router: 'basics' },
@@ -22,9 +24,9 @@ const menuList = [
   { name: '点轨迹图', router: 'PointTripLayer', id: 4 },
   { name: '热力点图', router: 'HeatPointLayer', id: 5 },
   { name: '热力图图', router: 'HeatmapLayer', id: 6 },
-  { name: '热力柱图', router: ' HeatGridLayer', id: 7 },
+  { name: '热力柱图', router: 'HeatGridLayer', id: 7 },
   { name: '烟花点图', router: 'SparkLayer', id: 8 },
-  { name: '圆图', router: ' CircleLayer', id: 9 },
+  { name: '圆图', router: 'CircleLayer', id: 9 },
   { name: '波纹点图', router: 'RippleLayer', id: 10 },
   { name: '文字图', router: 'TextLayer', id: 11 },
   { name: '雷达图', router: 'FanLayer', id: 12 },
@@ -51,6 +53,7 @@ menuInfo.value = menuList[0];
 function toRoute(item) {
   menuInfo.value = item;
   menuShow.value = false;
+  router.push('/' + item.router);
 }
 
 onMounted(() => {});
@@ -82,7 +85,7 @@ onMounted(() => {});
   box-sizing: border-box;
   border-radius: 5px;
 }
-.li-box:hover{
+.li-box:hover,.li-box.active{
   background-color:#B2DFEE;
 }
 </style>
