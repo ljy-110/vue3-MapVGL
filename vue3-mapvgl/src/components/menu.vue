@@ -19,6 +19,7 @@ const router = useRouter();
 const menuShow = ref(true);
 const menuList = [
   { name: '基础版本', id: '1', router: 'basics' },
+  { name: 'three+3d', id: '122', router: 'mvg3DThree' },
   { name: '基础点图', router: 'PointLayer', id: 2 },
   { name: 'Icon图标图', router: 'IconLayer', id: 3 },
   { name: '点轨迹图', router: 'PointTripLayer', id: 4 },

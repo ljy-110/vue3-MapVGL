@@ -13,6 +13,26 @@ const mainRoute = [
     path: 'IconLayer',
     component: () => import('../views/mvg/IconLayer.vue'),
     meta: { title: 'icon图标图层' }
+  },
+  {
+    path: 'mvg3DThree',
+    component: () => import('../views/mvg/mvg3DThree.vue'),
+    meta: { title: '3d+three' }
+  },
+  {
+    path: 'PointTripLayer',
+    component: () => import('../views/mvg/PointTripLayer.vue'),
+    meta: { title: '点轨迹图' }
+  },
+  {
+    path: 'HeatPointLayer',
+    component: () => import('../views/mvg/HeatPointLayer.vue'),
+    meta: { title: '热力点图' }
+  },
+  {
+    path: 'HeatmapLayer',
+    component: () => import('../views/mvg/HeatmapLayer.vue'),
+    meta: { title: '热力图' }
   }
   // {
   //   path: 'jiangsuPatrolRectification',

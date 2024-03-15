@@ -17,6 +17,7 @@ function init() {
   bmapgl.enableScrollWheelZoom(true);
   bmapgl.disableDoubleClickZoom();
   bmapgl.setMapStyleV2({ styleJson: mapStyleJson });
+  
   // bmapgl.setMinZoom(10) //缩放限制
   // let dist = new BMapGL.DistrictLayer({
   //   name: '(广东省)',

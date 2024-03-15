@@ -12,7 +12,10 @@
     "element-plus": "^2.4.4",
     "mapvgl": "^1.0.0-beta.189",
     "vue": "^3.2.8",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "d3-geo": "^3.1.0",
+    "three": "^0.160.1",
+    "vue-mapvgl": "^0.0.34"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.6.0",
